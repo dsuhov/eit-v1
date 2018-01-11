@@ -1,0 +1,17 @@
+{
+  "name": "msceit",
+  "version": "1.0.0",
+  "description": "Cool test",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dsuhov",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.0"
+  }
+}

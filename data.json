@@ -1,0 +1,20 @@
+{ 
+  "sectionA": [
+      {
+        "taskNum": "1",
+        "imgSource": "images/secA1.jpg"
+      },
+      {
+        "taskNum": "2",
+        "imgSource": "images/secA2.jpg"
+      },
+      {
+        "taskNum": "3",
+        "imgSource": "images/secA3.jpg"
+      },
+      {
+        "taskNum": "4",
+        "imgSource": "images/secA4.jpg"
+      }
+    ]
+}

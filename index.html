@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>MSCEIT v.2.0</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="heading">
+      <h1>MSCEIT v.2.0</h1>
+      <p><strong>Тест Дж. Мэйера, П. Сэловея и Д. Карузо*</strong></p>
+    </div>
+    <div class="cite">
+      <blockquote><span class="quotes">&#10075;&#10075;</span><b>Эмоциональный интеллект</b> — это часть социального интеллекта, которая включает
+      способность контролировать собственные чувства и эмоции и чувства и эмоции других, различать их и использовать эту информацию, чтобы контролировать мышление
+      и действия.<span class="quotes">&#10076;&#10076;</span></blockquote>
+    </div>
+    <div class="header-foot">
+      <p>*Перевод и адаптация: Е. А. Сергиенко, И. И. Ветрова</p>
+    </div>
+  </header>
+  <main>
+    <button type="button" class="btn-main" id="btn-main">Начать<span class="arrow"></span></button>
+  </main>
+
+  <script type="text/html" id="sectionA">
+    <h2 class="section-title">Секция <span class="section-name">А</span>. Задание <span class="section-item">{{taskNum}}</span>.</h2>
+    <div class="task">
+      <img class="centering" src="{{imgSource}}" alt="Фотография с лицом" width="250px">
+    </div>
+    <p class="description centering">
+      Инструкция.&nbsp;<b>Насколько&nbsp;сильно&nbsp;выражены нижеприведённые&nbsp;чувства&nbsp;на&nbsp;этом&nbsp;лице?</b> (Пожалуйста,&nbsp;дайте&nbsp;ответ&nbsp;по&nbsp;каждой&nbsp;шкале)
+    </p>
+    <div class="answers">
+      <div class="table-frame centering">
+
+        <ul class="table-frame-row">
+          <li class="left-end">Отсутствие счастья</li>
+          <li>
+            <div class="inner-table">
+              <ul class="inner-table-row">
+                <li id="btn-ans-1-1">1</li>
+                <li id="btn-ans-1-2">2</li>
+                <li id="btn-ans-1-3">3</li>
+                <li id="btn-ans-1-4">4</li>
+                <li id="btn-ans-1-5">5</li>
+              </ul>
+            </div>
+          </li>
+          <li class="right-end">Огромное счастье</li>
+        </ul>
+
+        <ul class="table-frame-row">
+          <li class="left-end">Отсутствие страха</li>
+          <li>
+            <div class="inner-table">
+              <ul class="inner-table-row">
+                <li id="btn-ans-2-1">1</li>
+                <li id="btn-ans-2-2">2</li>
+                <li id="btn-ans-2-3">3</li>
+                <li id="btn-ans-2-4">4</li>
+                <li id="btn-ans-2-5">5</li>
+              </ul>
+            </div>
+          </li>
+          <li class="right-end">Сильнейший страх</li>
+        </ul>
+
+        <ul class="table-frame-row">
+          <li class="left-end">Отсутствие удивления</li>
+          <li>
+            <div class="inner-table">
+              <ul class="inner-table-row">
+                <li id="btn-ans-3-1">1</li>
+                <li id="btn-ans-3-2">2</li>
+                <li id="btn-ans-3-3">3</li>
+                <li id="btn-ans-3-4">4</li>
+                <li id="btn-ans-3-5">5</li>
+              </ul>
+            </div>
+          </li>
+          <li class="right-end">Крайняя степень удивления</li>
+        </ul>
+
+   
+
+        <ul class="table-frame-row">
+          <li class="left-end">Отсутствие отвращения</li>
+          <li>
+            <div class="inner-table">
+              <ul class="inner-table-row">
+                <li id="btn-ans-4-1">1</li>
+                <li id="btn-ans-4-2">2</li>
+                <li id="btn-ans-4-3">3</li>
+                <li id="btn-ans-4-4">4</li>
+                <li id="btn-ans-4-5">5</li>
+              </ul>
+            </div>
+          </li>
+          <li class="right-end">Полное отвращение</li>
+        </ul>
+
+        <ul class="table-frame-row">
+          <li class="left-end">Отсутствие волнения</li>
+          <li>
+            <div class="inner-table">
+              <ul class="inner-table-row">
+                <li id="btn-ans-5-1">1</li>
+                <li id="btn-ans-5-2">2</li>
+                <li id="btn-ans-5-3">3</li>
+                <li id="btn-ans-5-4">4</li>
+                <li id="btn-ans-5-5">5</li>
+              </ul>
+            </div>
+          </li>
+          <li class="right-end">Сильнейшее волнение</li>
+        </ul>
+      </div>
+    </div>
+    <button class="next" type="button" id="btn-next" disabled>Далее</button>
+  </script>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
