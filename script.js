@@ -1,5 +1,6 @@
 const sec_frame = [
-  { section: "sectionA", tasks: 4, params: 5 }
+  { section: "sectionA", tasks: 4, params: 5 },
+  { section: "sectionB", tasks: 5, params: 3 }
 ];
 
 const btn_main = document.querySelector('.btn-main');
@@ -145,6 +146,32 @@ function renderSection(section, answers) {
       for (let i = 0; i < answers[0].length; i++) {
         html_string += '<tr>';
         html_string += `<td>${String(i+1)}</td>`;
+        answers.forEach(el => {
+          html_string += `<td>${el[i]}</td>`;
+        });
+        html_string += '</tr>';
+      }
+      
+      html_string += '</table>'
+
+      return html_string;
+    }; break;
+
+    case 'B': {
+      let items = ['a.', 'b.', 'c.'];
+      let html_string = 
+        `<table class="final-block centering">
+          <caption>Секция ${section}</caption>`;
+
+      html_string += '<tr>';
+      html_string += '<th></th>';
+      for (let i = 0; i < answers.length; i++)
+        html_string += `<th>Вопрос ${String(i+1)}</th>`;
+      html_string += '</tr>';
+      
+      for (let i = 0; i < answers[0].length; i++) {
+        html_string += '<tr>';
+        html_string += `<td>${items[i]}</td>`;
         answers.forEach(el => {
           html_string += `<td>${el[i]}</td>`;
         });
