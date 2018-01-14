@@ -1,6 +1,13 @@
-const sec_frame = [
+/*const sec_frame = [
   { section: "sectionA", tasks: 4, params: 5 },
-  { section: "sectionB", tasks: 5, params: 3 }
+  { section: "sectionB", tasks: 5, params: 3 },
+  { section: "sectionC", tasks: 20, params: 1 }
+];*/
+
+const sec_frame = [
+  { section: "sectionA", tasks: 1, params: 5 },
+  { section: "sectionB", tasks: 1, params: 3 },
+  { section: "sectionC", tasks: 20, params: 1 }
 ];
 
 const btn_main = document.querySelector('.btn-main');
@@ -131,6 +138,7 @@ function renderAnswers() {
 // "answers": Array of "params" field for all tasks 
 // returns String with HTML of table for given section
 function renderSection(section, answers) {
+  console.log(answers);
   switch(section) {
     case 'A': {
       let html_string = 
@@ -178,9 +186,33 @@ function renderSection(section, answers) {
         html_string += '</tr>';
       }
       
-      html_string += '</table>'
+      html_string += '</table>';
 
       return html_string;
     }; break;
+
+    case 'C': {
+      let html_string = `<table class="final-block centering"><caption>Секция ${section}</caption>`;
+
+      html_string += '<tr>';
+      html_string += '<th>№</th>';
+      html_string += '<th>Ответ</th>';
+      html_string += '<th>№</th>';
+      html_string += '<th>Ответ</th>';
+
+      for (let i = 0; i < 10; i++) {
+        html_string += `<tr>`;
+        html_string += `<td>${String(i+1)}</td>`;
+        html_string += `<td>${answers[i][0]}</td>`;
+        html_string += `<td>${String(i+11)}</td>`;
+        html_string += `<td>${answers[i+10][0]}</td>`;
+        html_string += `</tr>`;
+      }
+
+      html_string += '</table>';
+
+      return html_string;
+    };
+    break;
   }
 }

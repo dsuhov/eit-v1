@@ -174,7 +174,6 @@
     </p>
     <div class="answers">
       <div class="table-frame centering">
-
         <ul class="table-frame-row">
           <li class="left-end">Отсутствие счастья</li>
           <li>
@@ -190,7 +189,6 @@
           </li>
           <li class="right-end">Огромное счастье</li>
         </ul>
-
         <ul class="table-frame-row">
           <li class="left-end">Отсутствие страха</li>
           <li>
@@ -206,7 +204,6 @@
           </li>
           <li class="right-end">Сильнейший страх</li>
         </ul>
-
         <ul class="table-frame-row">
           <li class="left-end">Отсутствие удивления</li>
           <li>
@@ -222,9 +219,6 @@
           </li>
           <li class="right-end">Крайняя степень удивления</li>
         </ul>
-
-   
-
         <ul class="table-frame-row">
           <li class="left-end">Отсутствие отвращения</li>
           <li>
@@ -240,7 +234,6 @@
           </li>
           <li class="right-end">Полное отвращение</li>
         </ul>
-
         <ul class="table-frame-row">
           <li class="left-end">Отсутствие волнения</li>
           <li>
@@ -308,6 +301,27 @@
       </table>
 
     </div>
+
+    <button class="next" type="button" id="btn-next" disabled>Далее</button>
+  </script>
+
+  <script type="text/html" id="sectionC">
+    <h2 class="section-title">Секция <span class="section-name">C</span>. Задание <span class="section-item">{{taskNum}}</span>.</h2>
+    
+    <p class="description centering">
+     <b>Инструкция. </b>Завершите предложение, выбрав наиболее подходящее слово из списка.
+    </p>
+
+    <div class="answers">
+      <p class="question">{{question}}</p>
+
+      <ul>
+        <li><span class="vars" id="btn-ans-1-a">{{a.}}</span></li>
+        <li><span class="vars" id="btn-ans-1-b">{{b.}}</span></li>
+        <li><span class="vars" id="btn-ans-1-c">{{c.}}</span></li>
+        <li><span class="vars" id="btn-ans-1-d">{{d.}}</span></li>
+        <li><span class="vars" id="btn-ans-1-e">{{e.}}</span></li>
+      </ul>
 
     <button class="next" type="button" id="btn-next" disabled>Далее</button>
   </script>
