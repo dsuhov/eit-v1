@@ -277,5 +277,91 @@
       "action3": "Он кричал во весь голос, посылая проклятия водителю грузовика.",
       "action4": "Он поклялся никогда больше не ездить по этому шоссе."
     }
+  ],
+  "sectionE": [
+    {
+      "taskNum": "1",
+      "imgSource": "images/secE1.jpg",
+      "emClass_1row": "happy",
+      "emClass_2row": "sadness",
+      "emClass_3row": "fear",
+      "emClass_4row": "anger",
+      "emClass_5row": "aversion",
+      "emotion1": "Счастье",
+      "emotion2": "Печаль",
+      "emotion3": "Страх",
+      "emotion4": "Злость",
+      "emotion5": "Отвращение"
+    },
+    {
+      "taskNum": "2",
+      "imgSource": "images/secE2.jpg",
+      "emClass_1row": "sadness",
+      "emClass_2row": "anger",
+      "emClass_3row": "astonishment",
+      "emClass_4row": "aversion",
+      "emClass_5row": "excitement",
+      "emotion1": "Печаль",
+      "emotion2": "Злость",
+      "emotion3": "Удивление",
+      "emotion4": "Отвращение",
+      "emotion5": "Возбуждение"
+    },
+    {
+      "taskNum": "3",
+      "imgSource": "images/secE3.jpg",
+      "emClass_1row": "happy",
+      "emClass_2row": "fear",
+      "emClass_3row": "anger",
+      "emClass_4row": "astonishment",
+      "emClass_5row": "aversion",
+      "emotion1": "Счастье",
+      "emotion2": "Страх",
+      "emotion3": "Злость",
+      "emotion4": "Удивление",
+      "emotion5": "Отвращение"
+    },
+    {
+      "taskNum": "4",
+      "imgSource": "images/secE4.jpg",
+      "emClass_1row": "sadness",
+      "emClass_2row": "fear",
+      "emClass_3row": "anger",
+      "emClass_4row": "astonishment",
+      "emClass_5row": "aversion",
+      "emotion1": "Печаль",
+      "emotion2": "Страх",
+      "emotion3": "Злость",
+      "emotion4": "Удивление",
+      "emotion5": "Отвращение"
+    },
+    {
+      "taskNum": "5",
+      "imgSource": "images/secE5.jpg",
+      "emClass_1row": "happy",
+      "emClass_2row": "sadness",
+      "emClass_3row": "fear",
+      "emClass_4row": "anger",
+      "emClass_5row": "aversion",
+      "emotion1": "Счастье",
+      "emotion2": "Печаль",
+      "emotion3": "Страх",
+      "emotion4": "Злость",
+      "emotion5": "Отвращение"
+    },
+    {
+      "taskNum": "6",
+      "imgSource": "images/secE6.jpg",
+      "emClass_1row": "happy",
+      "emClass_2row": "sadness",
+      "emClass_3row": "anger",
+      "emClass_4row": "astonishment",
+      "emClass_5row": "aversion",
+      "emotion1": "Счастье",
+      "emotion2": "Печаль",
+      "emotion3": "Злость",
+      "emotion4": "Удивление",
+      "emotion5": "Отвращение"
+    }
   ]
 }

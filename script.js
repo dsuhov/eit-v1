@@ -2,14 +2,16 @@
   { section: "sectionA", tasks: 4, params: 5 },
   { section: "sectionB", tasks: 5, params: 3 },
   { section: "sectionC", tasks: 20, params: 1 },
-  { section: "sectionD", tasks: 5, params: 4 }
+  { section: "sectionD", tasks: 5, params: 4 },
+  { section: "sectione", tasks: 6, params: 5 }
 ];*/
 
 const sec_frame = [
-  { section: "sectionA", tasks: 1, params: 5 },
+  // { section: "sectionA", tasks: 1, params: 5 },
   { section: "sectionB", tasks: 1, params: 3 },
-  { section: "sectionC", tasks: 20, params: 1 },
-  { section: "sectionD", tasks: 5, params: 4 }
+  // { section: "sectionC", tasks: 1, params: 1 },
+  // { section: "sectionD", tasks: 1, params: 4 },
+  { section: "sectionE", tasks: 6, params: 5 }
 ];
 
 const btn_main = document.querySelector('.btn-main');
@@ -220,6 +222,31 @@ function renderSection(section, answers) {
         html_string += '</tr>';
       }
       html_string += '</table>';
+      return html_string;
+    }; break;
+
+    case 'E': {
+      let html_string = 
+        `<table class="final-block centering">
+          <caption>Картина ${section}</caption>`;
+
+      html_string += '<tr>';
+      html_string += '<th></th>';
+      for (let i = 0; i < answers.length; i++)
+        html_string += `<th>Лицо ${String(i+1)}</th>`;
+      html_string += '</tr>';
+      
+      for (let i = 0; i < answers[0].length; i++) {
+        html_string += '<tr>';
+        html_string += `<td>${String(i+1)}</td>`;
+        answers.forEach(el => {
+          html_string += `<td>${el[i]}</td>`;
+        });
+        html_string += '</tr>';
+      }
+      
+      html_string += '</table>'
+
       return html_string;
     }; break;
   }

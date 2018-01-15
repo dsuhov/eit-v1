@@ -411,8 +411,9 @@
   background: url("images/secEpics.png") 0 0 no-repeat;
 }
 
-.emoji:hover {
-  outline: 2px solid #80C845;
+.emoji:hover,
+.emoji.active {
+  outline: 3px solid #80C845;
   cursor: pointer;
 }
 
@@ -480,6 +481,34 @@
 .aversion .emoji5 {
   background-position: -240px -240px;
 }
+
+.astonishment .emoji2 {
+  background-position: -60px -300px;
+}
+.astonishment .emoji3 {
+  background-position: -120px -300px;
+}
+.astonishment .emoji4 {
+  background-position: -180px -300px;
+}
+.astonishment .emoji5 {
+  background-position: -240px -300px;
+}
+
+.excitement .emoji2 {
+  background-position: -60px -360px;
+}
+.excitement .emoji3 {
+  background-position: -120px -360px;
+}
+.excitement .emoji4 {
+  background-position: -180px -360px;
+}
+.excitement .emoji5 {
+  background-position: -240px -360px;
+}
+
+
 
 /* SECTION F */
 

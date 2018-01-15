@@ -370,6 +370,72 @@
     <button class="next" type="button" id="btn-next" disabled>Далее</button>
   </script>
 
+  <script type="text/html" id="sectionE">
+    <h2 class="section-title">Секция <span class="section-name">E</span>. Задание <span class="section-item">{{taskNum}}</span>.</h2>
+    
+    
+    <img src="{{imgSource}}" alt="Картинка" class="centering" width="700">
+    
+    <p class="description centering">
+     <b>Инструкция.</b> Оцените, насколько сильно выражено каждое из чувств, приведенных ниже, на этой картине. (Пожалуйста, выберите ответ по каждому пункту)
+    </p>
+
+    <div class="answers">
+      <table class="emoji-table centering">
+        <tr class="headers">
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+        </tr>
+        <tr class="{{emClass_1row}}">
+          <td class="legend">{{emotion1}}</td>
+          <td class="emoji emoji1" id="btn-ans-1-1"></td>
+          <td class="emoji emoji2" id="btn-ans-1-2"></td>
+          <td class="emoji emoji3" id="btn-ans-1-3"></td>
+          <td class="emoji emoji4" id="btn-ans-1-4"></td>
+          <td class="emoji emoji5" id="btn-ans-1-5"></td>
+        </tr>
+        <tr class="{{emClass_2row}}">
+          <td class="legend">{{emotion2}}</td>
+          <td class="emoji emoji1" id="btn-ans-2-1"></td>
+          <td class="emoji emoji2" id="btn-ans-2-2"></td>
+          <td class="emoji emoji3" id="btn-ans-2-3"></td>
+          <td class="emoji emoji4" id="btn-ans-2-4"></td>
+          <td class="emoji emoji5" id="btn-ans-2-5"></td>
+        </tr>
+        <tr class="{{emClass_3row}}">
+          <td class="legend">{{emotion3}}</td>
+          <td class="emoji emoji1" id="btn-ans-3-1"></td>
+          <td class="emoji emoji2" id="btn-ans-3-2"></td>
+          <td class="emoji emoji3" id="btn-ans-3-3"></td>
+          <td class="emoji emoji4" id="btn-ans-3-4"></td>
+          <td class="emoji emoji5" id="btn-ans-3-5"></td>
+        </tr>
+        <tr class="{{emClass_4row}}">
+          <td class="legend">{{emotion4}}</td>
+          <td class="emoji emoji1" id="btn-ans-4-1"></td>
+          <td class="emoji emoji2" id="btn-ans-4-2"></td>
+          <td class="emoji emoji3" id="btn-ans-4-3"></td>
+          <td class="emoji emoji4" id="btn-ans-4-4"></td>
+          <td class="emoji emoji5" id="btn-ans-4-5"></td>
+        </tr>
+        <tr class="{{emClass_5row}}">
+          <td class="legend">{{emotion5}}</td>
+          <td class="emoji emoji1" id="btn-ans-5-1"></td>
+          <td class="emoji emoji2" id="btn-ans-5-2"></td>
+          <td class="emoji emoji3" id="btn-ans-5-3"></td>
+          <td class="emoji emoji4" id="btn-ans-5-4"></td>
+          <td class="emoji emoji5" id="btn-ans-5-5"></td>
+        </tr>
+      </table>
+    </div>
+
+    <button class="next" type="button" id="btn-next" disabled>Далее</button>
+  </script>
+
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
