@@ -256,16 +256,12 @@
 
   <script type="text/html" id="sectionB">
     <h2 class="section-title">Секция <span class="section-name">B</span>. Задание <span class="section-item">{{taskNum}}</span>.</h2>
-    
     <p class="description centering">
      <b>Инструкция.</b> Пожалуйста, выберите ответ на каждый из вопросов.
     </p>
-
     <div class="answers">
       <p class="question">{{question}}</p>
-
       <table class="secB-variants centering">
-
         <tr>
           <th></th>
           <th><b>Не помогает</b></th>
@@ -299,22 +295,17 @@
           <td id="btn-ans-3-5">5</td>
         </tr>
       </table>
-
     </div>
-
     <button class="next" type="button" id="btn-next" disabled>Далее</button>
   </script>
 
   <script type="text/html" id="sectionC">
     <h2 class="section-title">Секция <span class="section-name">C</span>. Задание <span class="section-item">{{taskNum}}</span>.</h2>
-    
     <p class="description centering">
      <b>Инструкция. </b>Завершите предложение, выбрав наиболее подходящее слово из списка.
     </p>
-
     <div class="answers">
       <p class="question">{{question}}</p>
-
       <ul>
         <li><span class="vars" id="btn-ans-1-a">{{a.}}</span></li>
         <li><span class="vars" id="btn-ans-1-b">{{b.}}</span></li>
@@ -322,6 +313,59 @@
         <li><span class="vars" id="btn-ans-1-d">{{d.}}</span></li>
         <li><span class="vars" id="btn-ans-1-e">{{e.}}</span></li>
       </ul>
+    <button class="next" type="button" id="btn-next" disabled>Далее</button>
+  </script>
+
+  <script type="text/html" id="sectionD">
+    <h2 class="section-title">Секция <span class="section-name">D</span>. Задание <span class="section-item">{{taskNum}}</span>.</h2>
+    <p class="description centering">
+     <b>Инструкция.</b> Пожалуйста, выберите ответ для каждого действия.
+    </p>
+    <div class="answers">
+      <p class="question">{{question}}</p>
+      <div class="actions">
+        <div class="action action1">
+          <h3 class="action-description"><span>Действие 1:</span> {{action1}}</h3>
+          <ul>
+            <li><span id="btn-ans-1-a">Очень неэффективно</span></li>
+            <li><span id="btn-ans-1-b">Достаточно неэффективно</span></li>
+            <li><span id="btn-ans-1-c">Нейтрально</span></li>
+            <li><span id="btn-ans-1-d">Достаточно эффективно</span></li>
+            <li><span id="btn-ans-1-e">Очень эффективно</span></li>
+          </ul>
+        </div>
+        <div class="action action1">
+          <h3 class="action-description"><span>Действие 2:</span> {{action2}}</h3>
+          <ul>
+            <li><span id="btn-ans-2-a">Очень неэффективно</span></li>
+            <li><span id="btn-ans-2-b">Достаточно неэффективно</span></li>
+            <li><span id="btn-ans-2-c">Нейтрально</span></li>
+            <li><span id="btn-ans-2-d">Достаточно эффективно</span></li>
+            <li><span id="btn-ans-2-e">Очень эффективно</span></li>
+          </ul>
+        </div>
+        <div class="action action1">
+          <h3 class="action-description"><span>Действие 3:</span> {{action3}}</h3>
+          <ul>
+            <li><span id="btn-ans-3-a">Очень неэффективно</span></li>
+            <li><span id="btn-ans-3-b">Достаточно неэффективно</span></li>
+            <li><span id="btn-ans-3-c">Нейтрально</span></li>
+            <li><span id="btn-ans-3-d">Достаточно эффективно</span></li>
+            <li><span id="btn-ans-3-e">Очень эффективно</span></li>
+          </ul>
+        </div>
+        <div class="action action1">
+          <h3 class="action-description"><span>Действие 4:</span> {{action4}}</h3>
+          <ul>
+            <li><span id="btn-ans-4-a">Очень неэффективно</span></li>
+            <li><span id="btn-ans-4-b">Достаточно неэффективно</span></li>
+            <li><span id="btn-ans-4-c">Нейтрально</span></li>
+            <li><span id="btn-ans-4-d">Достаточно эффективно</span></li>
+            <li><span id="btn-ans-4-e">Очень эффективно</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <button class="next" type="button" id="btn-next" disabled>Далее</button>
   </script>

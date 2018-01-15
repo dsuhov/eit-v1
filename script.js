@@ -1,13 +1,15 @@
 /*const sec_frame = [
   { section: "sectionA", tasks: 4, params: 5 },
   { section: "sectionB", tasks: 5, params: 3 },
-  { section: "sectionC", tasks: 20, params: 1 }
+  { section: "sectionC", tasks: 20, params: 1 },
+  { section: "sectionD", tasks: 5, params: 4 }
 ];*/
 
 const sec_frame = [
   { section: "sectionA", tasks: 1, params: 5 },
   { section: "sectionB", tasks: 1, params: 3 },
-  { section: "sectionC", tasks: 20, params: 1 }
+  { section: "sectionC", tasks: 20, params: 1 },
+  { section: "sectionD", tasks: 5, params: 4 }
 ];
 
 const btn_main = document.querySelector('.btn-main');
@@ -175,8 +177,7 @@ function renderSection(section, answers) {
       html_string += '<th></th>';
       for (let i = 0; i < answers.length; i++)
         html_string += `<th>Вопрос ${String(i+1)}</th>`;
-      html_string += '</tr>';
-      
+      html_string += '</tr>';     
       for (let i = 0; i < answers[0].length; i++) {
         html_string += '<tr>';
         html_string += `<td>${items[i]}</td>`;
@@ -185,34 +186,41 @@ function renderSection(section, answers) {
         });
         html_string += '</tr>';
       }
-      
       html_string += '</table>';
-
       return html_string;
     }; break;
 
     case 'C': {
       let html_string = `<table class="final-block centering"><caption>Секция ${section}</caption>`;
-
-      html_string += '<tr>';
-      html_string += '<th>№</th>';
-      html_string += '<th>Ответ</th>';
-      html_string += '<th>№</th>';
-      html_string += '<th>Ответ</th>';
-
+      html_string += '<tr><th>№</th><th>Ответ</th><th>№</th><th>Ответ</th>';
       for (let i = 0; i < 10; i++) {
-        html_string += `<tr>`;
-        html_string += `<td>${String(i+1)}</td>`;
-        html_string += `<td>${answers[i][0]}</td>`;
-        html_string += `<td>${String(i+11)}</td>`;
-        html_string += `<td>${answers[i+10][0]}</td>`;
-        html_string += `</tr>`;
+        html_string += `<tr><td>${String(i+1)}</td><td>${answers[i][0]}</td><td>${String(i+11)}</td><td>${answers[i+10][0]}</td></tr>`;
       }
-
       html_string += '</table>';
-
       return html_string;
     };
     break;
+
+    case 'D': {
+      let html_string = 
+        `<table class="final-block centering">
+          <caption>Секция ${section}</caption>`;
+
+      html_string += '<tr>';
+      html_string += '<th></th>';
+      for (let i = 0; i < answers.length; i++)
+        html_string += `<th>Ситуаця ${String(i+1)}</th>`;
+      html_string += '</tr>';     
+      for (let i = 0; i < answers[0].length; i++) {
+        html_string += '<tr>';
+        html_string += '<td></td>';
+        answers.forEach(el => {
+          html_string += `<td>${el[i]}</td>`;
+        });
+        html_string += '</tr>';
+      }
+      html_string += '</table>';
+      return html_string;
+    }; break;
   }
 }

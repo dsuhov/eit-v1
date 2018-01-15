@@ -326,7 +326,8 @@
   position: relative;
 }
 
-.action ul span:hover {
+.action ul span:hover,
+.action span.active {
   cursor: pointer;
 }
 
@@ -338,7 +339,8 @@
   left: -10px;
 }
 
-.action span:hover::before {
+.action span:hover::before,
+.action span.active::before {
   display: block;
   content: "";
   width: 10px;
