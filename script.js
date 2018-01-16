@@ -3,15 +3,14 @@
   { section: "sectionB", tasks: 5, params: 3 },
   { section: "sectionC", tasks: 20, params: 1 },
   { section: "sectionD", tasks: 5, params: 4 },
-  { section: "sectione", tasks: 6, params: 5 }
+  { section: "sectionE", tasks: 6, params: 5 },
+  { section: "sectionF", tasks: 5, params: 3 },
+  { section: "sectionG", tasks: 12, params: 1 },
+  { section: "sectionH", tasks: 3, params: 3 }
 ];*/
 
 const sec_frame = [
-  // { section: "sectionA", tasks: 1, params: 5 },
-  { section: "sectionB", tasks: 1, params: 3 },
-  // { section: "sectionC", tasks: 1, params: 1 },
-  // { section: "sectionD", tasks: 1, params: 4 },
-  { section: "sectionE", tasks: 6, params: 5 }
+  { section: "sectionH", tasks: 3, params: 3 }
 ];
 
 const btn_main = document.querySelector('.btn-main');
@@ -133,6 +132,7 @@ function renderAnswers() {
       }, []);
 
     // TODO: test presence of new line characters between sections code
+    inHTML += '<h3 class="centering">Спасибо за то, что вы ответили на вопросы!</h3>';
     inHTML += renderSection(obj.section.slice(-1), arr);
   });
   document.body.innerHTML = inHTML;
@@ -142,7 +142,7 @@ function renderAnswers() {
 // "answers": Array of "params" field for all tasks 
 // returns String with HTML of table for given section
 function renderSection(section, answers) {
-  console.log(answers);
+
   switch(section) {
     case 'A': {
       let html_string = 
@@ -247,6 +247,62 @@ function renderSection(section, answers) {
       
       html_string += '</table>'
 
+      return html_string;
+    }; break;
+
+    case 'F': {
+      let items = ['a.', 'b.', 'c.'];
+      let html_string = 
+        `<table class="final-block centering">
+          <caption>Секция ${section}</caption>`;
+
+      html_string += '<tr>';
+      html_string += '<th></th>';
+      for (let i = 0; i < answers.length; i++)
+        html_string += `<th>Вопрос ${String(i+1)}</th>`;
+      html_string += '</tr>';     
+      for (let i = 0; i < answers[0].length; i++) {
+        html_string += '<tr>';
+        html_string += `<td>${items[i]}</td>`;
+        answers.forEach(el => {
+          html_string += `<td>${el[i]}</td>`;
+        });
+        html_string += '</tr>';
+      }
+      html_string += '</table>';
+      return html_string;
+    }; break;
+
+    case 'G': {
+      let html_string = `<table class="final-block centering"><caption>Секция ${section}</caption>`;
+      html_string += '<tr><th>№</th><th>Ответ</th><th>№</th><th>Ответ</th>';
+      for (let i = 0; i < 6; i++) {
+        html_string += `<tr><td>${String(i+1)}</td><td>${answers[i][0]}</td><td>${String(i+7)}</td><td>${answers[i+6][0]}</td></tr>`;
+      }
+      html_string += '</table>';
+      return html_string;
+    };
+    break;
+
+    case 'H': {
+      let html_string = 
+        `<table class="final-block centering">
+          <caption>Секция ${section}</caption>`;
+
+      html_string += '<tr>';
+      html_string += '<th>Ответ</th>';
+      for (let i = 0; i < answers.length; i++)
+        html_string += `<th>Ситуаця ${String(i+1)}</th>`;
+      html_string += '</tr>';     
+      for (let i = 0; i < answers[0].length; i++) {
+        html_string += '<tr>';
+        html_string += `<td>${String(i+1)}</td>`;
+        answers.forEach(el => {
+          html_string += `<td>${el[i]}</td>`;
+        });
+        html_string += '</tr>';
+      }
+      html_string += '</table>';
       return html_string;
     }; break;
   }
